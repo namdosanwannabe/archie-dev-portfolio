@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.underline {
+  text-decoration: underline;
+  font-weight: 600;
+  color: #08090a;
+  cursor: pointer;
+}
