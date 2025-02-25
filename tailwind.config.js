@@ -12,7 +12,8 @@ export default {
             colors: {
                 black: "#08090A",
                 gray: {
-                    DEFAULT: "#737373"
+                    DEFAULT: "#737373",
+                    light: "#E5E5E5"
                 }
             }
         },
