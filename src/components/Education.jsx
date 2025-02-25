@@ -8,7 +8,7 @@ import Eastwood from '../assets/logos/eastwood-logo.png';
 const Education = [
     {
         logo: Bpsu,
-        title: 'NSPIRE Software and Technology Solutions Inc.',
+        title: 'Bataan Peninsula State University',
         subtitle: 'Bachelor’s Degree in Information Technology (BSIT)',
         date: 'September 2020 - September 2024 ',
         onClick: () => window.open('https://www.bpsu.edu.ph/', '_blank')
