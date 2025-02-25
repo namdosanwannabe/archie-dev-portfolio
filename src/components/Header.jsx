@@ -38,7 +38,7 @@ const Header = () => {
                     Hi, I’m Archie 👋
                 </motion.h1>
                 <motion.p
-                    className='md:text-xl font-medium max-w-md leading-normal'
+                    className='md:text-xl font-normal max-w-md leading-normal'
                     initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}

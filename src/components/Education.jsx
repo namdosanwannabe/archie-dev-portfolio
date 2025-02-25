@@ -2,22 +2,23 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Accordion from '../components/Accordion'
 
-import Nspire from '../assets/logos/nspire-logo.jpg';
+import Bpsu from '../assets/logos/bpsu-logo.png';
+import Eastwood from '../assets/logos/eastwood-logo.png';
 
-const Experience = [
+const Education = [
     {
-        logo: Nspire,
+        logo: Bpsu,
         title: 'NSPIRE Software and Technology Solutions Inc.',
-        subtitle: 'Assistant Junior Programmer',
-        date: 'June 2024 - Present',
-        description: `Implemented the Atom Design System using C# and Blazor, streamlining UI development and enhancing design consistency. Developed over 50 reusable components, reducing redundancy and accelerating development. Focused on building a highly responsive web design for the system's prototype and now transitioning to mobile development with .NET MAUI.`
+        subtitle: 'Bachelor’s Degree in Information Technology (BSIT)',
+        date: 'September 2020 - September 2024 ',
+        onClick: () => window.open('https://www.bpsu.edu.ph/', '_blank')
     },
     {
-        logo: Nspire,
-        title: 'NSPIRE Software and Technology Solutions Inc.',
-        subtitle: 'UI/UX Designer Intern',
-        date: 'March 2024 - May  2024',
-        description: 'Designed components, interactive system prototypes, and responsive web interfaces using Figma, contributing to the UI/UX team. Gained hands-on experience in user experience design and enhanced skills in creating intuitive and visually appealing interfaces.'
+        logo: Eastwood,
+        title: ' Eastwoods Academy of Science and Technology',
+        subtitle: 'Information and Communications Technology (ICT)',
+        date: 'September 2018 - April 2020 ',
+        onClick: () => window.open('https://east.edu.ph/', '_blank')
     },
 ]
 
@@ -27,7 +28,7 @@ const WorkExperience = () => {
             className='mb-8'
             initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 1 }}
         >
             <motion.p
                 className='font-bold text-xl leading-normal mb-3'
@@ -35,7 +36,7 @@ const WorkExperience = () => {
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 1, ease: 'easeOut', delay: 0.6 }}
             >
-                Work Experience
+                Education
             </motion.p>
             <motion.div
                 className="flex flex-col gap-4"
@@ -43,7 +44,7 @@ const WorkExperience = () => {
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
             >
-                {Experience.map((item, index) => (
+                {Education.map((item, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 30 }}
@@ -56,9 +57,9 @@ const WorkExperience = () => {
                             title={item.title}
                             subtitle={item.subtitle}
                             date={item.date}
-                        >
-                            {item.description}
-                        </Accordion>
+                            dropdown={false}
+                            onClick={item.onClick}
+                        />
                     </motion.div>
                 ))}
             </motion.div>

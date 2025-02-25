@@ -1,9 +1,10 @@
 import './App.css'
 import Lanyard from './components/Lanyard/Lanyard'
+import Navigation from './components/Navigation'
 import Header from './components/Header'
 import About from './components/About'
 import WorkExperience from './components/WorkExperience'
-import Navigation from './components/Navigation'
+import Education from './components/Education'
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                     <Header />
                     <About />
                     <WorkExperience />
+                    <Education />
                     <div className='h-screen'></div>
                 </div>
                 <Navigation />
