@@ -13,19 +13,24 @@ const items = [
 
 const Navigation = () => {
     return (
-        <motion.div
-            className='fixed bottom-3 left-0 right-0 z-50'
-            initial={{ opacity: 0, filter: "blur(10px)" }}
-            animate={{ opacity: 1, filter: "blur(0px)" }}
-            transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
-        >
-            <Dock
-                items={items}
-                panelHeight={60}
-                baseItemSize={40}
-                magnification={50}
-            />
-        </motion.div>
+        <>
+            <div className="fixed inset-x-0 bottom-0 z-40 h-16 w-full bg-white to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] pointer-events-none"></div>
+            <motion.div
+                className='fixed bottom-0 left-0 right-0 z-50'
+                initial={{ opacity: 0, filter: "blur(10px)" }}
+                animate={{ opacity: 1, filter: "blur(0px)" }}
+                transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
+            >
+                <Dock
+                    items={items}
+                    panelHeight={60}
+                    baseItemSize={40}
+                    magnification={50}
+                    className='mb-3'
+                />
+            </motion.div>
+        </>
+
     )
 }
 

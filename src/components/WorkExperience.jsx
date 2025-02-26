@@ -24,7 +24,7 @@ const Experience = [
 const WorkExperience = () => {
     return (
         <motion.div
-            className='mb-8'
+            className='mb-10'
             initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -48,7 +48,7 @@ const WorkExperience = () => {
                         key={index}
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.6 }}
+                        transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
                     >
                         <Accordion
                             key={index}

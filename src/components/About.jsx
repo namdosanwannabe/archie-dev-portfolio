@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const About = () => {
     return (
         <motion.div
-            className='mb-8'
+            className='mb-10'
             initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.6, ease: 'easeOut' }}

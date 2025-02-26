@@ -12,18 +12,18 @@ import CoffeeFive from '../assets/coffees/coffee-5.jpg';
 import CoffeeSix from '../assets/coffees/coffee-6.jpg';
 
 const images = [
-    { id: 1, img: CoffeeOne },
+    { id: 1, img: CoffeeFour },
     { id: 2, img: CoffeeSix },
     { id: 3, img: CoffeeThree },
     { id: 4, img: CoffeeTwo },
     { id: 5, img: CoffeeFive },
-    { id: 6, img: CoffeeFour }
+    { id: 6, img: CoffeeOne }
 ]
 
 const Header = () => {
     return (
         <motion.div
-            className='flex justify-between mb-8 select-none'
+            className='flex justify-between mb-10 select-none'
             initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -56,7 +56,7 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
             >
-                <img src={Profile} alt='Archie Cayabyab' className='w-32 h-32 object-cover rounded-full' />
+                <img src={Profile} alt='Archie Cayabyab' className='w-28 h-28 sm:w-32 sm:h-32 object-cover rounded-full' />
             </motion.div>
             <motion.div
                 className='hidden lg:block z-20'
