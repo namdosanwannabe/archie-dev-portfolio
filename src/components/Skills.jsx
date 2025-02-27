@@ -44,7 +44,7 @@ const Skills = () => {
                         }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
                     >
-                        <Badge className="text-xs">{skill}</Badge>
+                        <Badge className="text-xs leading-relaxed">{skill}</Badge>
                     </motion.div>
                 ))}
             </motion.div>

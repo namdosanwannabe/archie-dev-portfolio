@@ -2,24 +2,26 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Badge from '../components/Badge'
 import Tabs from '../components/Tabs'
+import CardContainer from '../components/CardContainer'
 
-const tabsData = [
-    {
-        label: "Development",
-        content: (
-            <Development />
-        )
-    },
-    {
-        label: "Design",
-        content: (
-            <Design />
-        )
-    }
-];
-
+import { FaGithub } from "react-icons/fa";
+import { FaGlobe } from "react-icons/fa";
 
 const Projects = () => {
+    const tabsData = [
+        {
+            label: "Development",
+            content: (
+                <Development />
+            )
+        },
+        {
+            label: "Design",
+            content: (
+                <Design />
+            )
+        }
+    ];
 
     return (
         <motion.div
@@ -57,21 +59,134 @@ const Projects = () => {
 export default Projects
 
 function Development() {
+
+    const projects = [
+        {
+            image: 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png',
+            title: 'Project 1',
+            date: '2023 - 2024',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.',
+            techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind'],
+            actionButton: [
+                {
+                    label: 'Website',
+                    icon: <FaGithub />,
+                    onClick: () => window.open('https://www.google.com')
+                },
+                {
+                    label: 'Code',
+                    icon: <FaGlobe />,
+                    onClick: () => window.open('https://www.github.com')
+                }
+            ]
+        },
+        {
+            image: 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png',
+            title: 'Project 2',
+            date: '2023 - 2024',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.',
+            techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind'],
+            actionButton: [
+                {
+                    label: 'Website',
+                    icon: <FaGithub />,
+                    onClick: () => window.open('https://www.google.com')
+                },
+                {
+                    label: 'Code',
+                    icon: <FaGlobe />,
+                    onClick: () => window.open('https://www.github.com')
+                }
+            ]
+        },
+        {
+            image: 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png',
+            title: 'Project 3',
+            date: '2023 - 2024',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.',
+            techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind'],
+            actionButton: [
+                {
+                    label: 'Website',
+                    icon: <FaGithub />,
+                    onClick: () => window.open('https://www.google.com')
+                },
+                {
+                    label: 'Code',
+                    icon: <FaGlobe />,
+                    onClick: () => window.open('https://www.github.com')
+                }
+            ]
+        },
+        {
+            image: 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png',
+            title: 'Project 4',
+            date: '2023 - 2024',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.',
+            techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind'],
+            actionButton: [
+                {
+                    label: 'Website',
+                    icon: <FaGithub />,
+                    onClick: () => window.open('https://www.google.com')
+                },
+                {
+                    label: 'Code',
+                    icon: <FaGlobe />,
+                    onClick: () => window.open('https://www.github.com')
+                }
+            ]
+        },
+    ]
+
     return (
-        <div className='grid grid-cols-1 gap-3 sm:grid-cols-2'>
-            <div className='bg-gray-200 h-80 rounded-md'></div>
-            <div className='bg-gray-200 h-80 rounded-md'></div>
-            <div className='bg-gray-200 h-80 rounded-md'></div>
-            <div className='bg-gray-200 h-80 rounded-md'></div>
-        </div>
+        <CardContainer arr={projects} />
     )
 }
 
 function Design() {
+    const projects = [
+        {
+            image: 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png',
+            title: 'Design 1',
+            date: '2023 - 2024',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.',
+            techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind'],
+            actionButton: [
+                {
+                    label: 'Website',
+                    icon: <FaGithub />,
+                    onClick: () => window.open('https://www.google.com')
+                },
+                {
+                    label: 'Code',
+                    icon: <FaGlobe />,
+                    onClick: () => window.open('https://www.github.com')
+                }
+            ]
+        },
+        {
+            image: 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png',
+            title: 'Design 2',
+            date: '2023 - 2024',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.',
+            techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind'],
+            actionButton: [
+                {
+                    label: 'Website',
+                    icon: <FaGithub />,
+                    onClick: () => window.open('https://www.google.com')
+                },
+                {
+                    label: 'Code',
+                    icon: <FaGlobe />,
+                    onClick: () => window.open('https://www.github.com')
+                }
+            ]
+        },
+    ]
+
     return (
-        <div className='grid grid-cols-1 gap-3 sm:grid-cols-2'>
-            <div className='bg-gray-200 h-80 rounded-md'></div>
-            <div className='bg-gray-200 h-80 rounded-md'></div>
-        </div>
+        <CardContainer arr={projects} />
     )
 }
