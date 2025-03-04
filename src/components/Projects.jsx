@@ -7,6 +7,10 @@ import CardContainer from '../components/CardContainer'
 import { FaGithub } from "react-icons/fa";
 import { FaGlobe } from "react-icons/fa";
 
+import BarnBuddy from "../assets/projects/barnbuddy.png";
+import Omnifood from "../assets/projects/omnifood.png";
+import Todowy from "../assets/projects/todowy.png";
+
 const Projects = () => {
     const tabsData = [
         {
@@ -33,7 +37,7 @@ const Projects = () => {
         >
             <>
                 <div className='space-y-2 mb-10'>
-                    <Badge className="text-sm">{'My Projects'}</Badge>
+                    <Badge className="text-sm py-1 px-2.5">{'My Projects'}</Badge>
                     <motion.h2
                         className='font-bold text-3xl sm:text-5xl tracking-tight'
                         initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
@@ -62,78 +66,59 @@ function Development() {
 
     const projects = [
         {
-            image: 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png',
-            title: 'Project 1',
-            date: '2023 - 2024',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.',
-            techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind'],
+            image: `${Todowy}`,
+            title: 'Todowy',
+            date: '2024 - 2025',
+            desc: 'Designed, and developed a custom to-do list website that helps organize tasks, set priorities, and boost productivity.',
+            techStack: ['React', 'JavaScript', 'Tailwind', 'DaisyUI'],
             actionButton: [
                 {
                     label: 'Website',
-                    icon: <FaGithub />,
-                    onClick: () => window.open('https://www.google.com')
+                    icon: <FaGlobe />,
+                    onClick: () => window.open('https://todowy.netlify.app/')
                 },
                 {
-                    label: 'Code',
-                    icon: <FaGlobe />,
-                    onClick: () => window.open('https://www.github.com')
+                    label: 'Source',
+                    icon: <FaGithub />,
+                    onClick: () => window.open('https://github.com/namdosanwannabe/Todowy')
                 }
             ]
         },
         {
-            image: 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png',
-            title: 'Project 2',
-            date: '2023 - 2024',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.',
-            techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind'],
+            image: `${Omnifood}`,
+            title: 'Omnifood',
+            date: '2024',
+            desc: 'Developed a landing page for Omnifood AI: Showcase its features, optimize conversions, and enhance user engagement.',
+            techStack: ['HTML', 'CSS', 'JavaScript'],
             actionButton: [
                 {
                     label: 'Website',
-                    icon: <FaGithub />,
-                    onClick: () => window.open('https://www.google.com')
+                    icon: <FaGlobe />,
+                    onClick: () => window.open('https://omnifoodkitchen.netlify.app/')
                 },
                 {
-                    label: 'Code',
-                    icon: <FaGlobe />,
-                    onClick: () => window.open('https://www.github.com')
+                    label: 'Source',
+                    icon: <FaGithub />,
+                    onClick: () => window.open('https://github.com/namdosanwannabe/Omnifood')
                 }
             ]
         },
         {
-            image: 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png',
-            title: 'Project 3',
-            date: '2023 - 2024',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.',
-            techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind'],
+            image: `${BarnBuddy}`,
+            title: 'BarnBuddy Landing Page',
+            date: '2024',
+            desc: 'Built a landing page for BarnBuddy, an Android app developed with Java and Android Studio to streamline farm animal management through agricultural extension services.',
+            techStack: ['HTML', 'CSS', 'JavaScript', 'AOS'],
             actionButton: [
                 {
                     label: 'Website',
-                    icon: <FaGithub />,
-                    onClick: () => window.open('https://www.google.com')
+                    icon: <FaGlobe />,
+                    onClick: () => window.open('https://barnbuddy.netlify.app/')
                 },
                 {
-                    label: 'Code',
-                    icon: <FaGlobe />,
-                    onClick: () => window.open('https://www.github.com')
-                }
-            ]
-        },
-        {
-            image: 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png',
-            title: 'Project 4',
-            date: '2023 - 2024',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.',
-            techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind'],
-            actionButton: [
-                {
-                    label: 'Website',
+                    label: 'Source',
                     icon: <FaGithub />,
-                    onClick: () => window.open('https://www.google.com')
-                },
-                {
-                    label: 'Code',
-                    icon: <FaGlobe />,
-                    onClick: () => window.open('https://www.github.com')
+                    onClick: () => window.open('https://github.com/namdosanwannabe/BarnBuddy-Website')
                 }
             ]
         },

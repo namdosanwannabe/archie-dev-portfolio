@@ -51,7 +51,7 @@ const Card = ({ image, title, date, desc, techStack = [], actionButton = [] }) =
                             (button) => (
                                 <Badge
                                     key={button.label}
-                                    className="text-[10px] cursor-pointer inline-flex gap-1"
+                                    className="text-[10px] cursor-pointer inline-flex gap-1 py-1 px-2.5"
                                     onClick={button.onClick}
                                 >
                                     {button?.icon}

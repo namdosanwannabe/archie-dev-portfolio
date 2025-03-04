@@ -52,7 +52,7 @@ const Accordion = ({ dropdown = true, logo, title, subtitle, date, onClick, chil
                 <AnimatePresence>
                     {isOpen && dropdown && (
                         <motion.div
-                            className="mt-2 text-xs sm:text-sm text-black font-normal"
+                            className="mt-2 text-xs sm:text-sm text-black font-normal overflow-hidden"
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
